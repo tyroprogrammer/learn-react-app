@@ -11,6 +11,9 @@
 # production
 /build
 
+#markdown-build
+/src/tutorial/build
+
 # misc
 .DS_Store
 .env.local

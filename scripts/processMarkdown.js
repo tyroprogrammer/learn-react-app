@@ -6,6 +6,12 @@ const TUTORIAL_PATH = 'src/tutorial';
 const TUTORIAL_BUILD_PATH = 'src/tutorial/build';
 const MARKDOWN_FILE_EXTENSION = 'md';
 
+function checkBuildFolderExist(){
+    if (!fs.existsSync(TUTORIAL_BUILD_PATH)) {
+        fs.mkdirSync(TUTORIAL_BUILD_PATH);
+    }
+}
+
 function cleanBuildFolder(){
     fs.readdir(TUTORIAL_BUILD_PATH, function (err, items) {
         items.forEach(function(file) {
@@ -55,6 +61,7 @@ function isFileOfExtension(filename, extension) {
     return filename.split('.').slice(-1)[0] === extension;
 }
 
+checkBuildFolderExist();
 cleanBuildFolder();
 createJSFilesFromMarkdown();
 
