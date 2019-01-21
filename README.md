@@ -4,6 +4,9 @@ The goal of this tutorial is to quickly get you off the ground with `React` conc
 
 The way this tutorial works is that first you have to checkout this project on your computer, and run the application locally. Then open the application on a browser and you can go through the tutorial as you like.
 
+![Learn React App](./public/Learn_React_App.png "Learn React App")
+
+
 ## Checkout
 
 Checkout the project to your computer using `git`:
