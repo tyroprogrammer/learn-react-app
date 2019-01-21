@@ -130,11 +130,15 @@ class Dialog extends React.Component {
 
 Here instead of displaying `this.props.children` like we did previously, we executed different props function as appropriate on different section. Whatever is returned from that function during runtime will be displayed on that section. The `Dialog` component remains completely agnostic to what it's displaying.
 
+Let's do some exercise shall we? Please open the exercise file and follow to instructions to make appropriate changes.
+
+<!--exercise-->
+
 There are three things I would like you to note here:
 
 1. We named those props above with `render` prefix (`renderHeader`, `renderFooter` etc) but it's just a naming convention, we could have named it anything. It's just nice to prefix it with `render` because someone looking at our code would easily be able tell that we are using this `props` function to render something.
 
-2. The "render" props we passed is just any regular javascript function, its just that it's returning some component. We can do really anything here that we can do in a javascript function. When we called these function inside the `Dialog` we could passed some arguments if we like. The only limit here really is your imagination here.
+2. The "render" props we passed is just any regular javascript function, its just that it's returning some component. We can do really anything here that we can do in a javascript function. When we called these function inside the `Dialog` we could pass some arguments if we like. The only limit here really is your imagination here.
 
 3. We can pass around components in React as a `props` just like we can pass an object or string or function. End of the day React component are just functions. So take the liberty of passing it around.
 

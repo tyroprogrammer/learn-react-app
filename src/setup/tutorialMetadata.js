@@ -54,7 +54,11 @@ export default [
         route: '/tutorial/understanding-state',
         displayName: '5 - Understanding State',
         markdownLocation: 'src/tutorial/build/05-State.js',
-        exercises: []
+        exercises: [{
+            tag: "exercise1",
+            location: "src/exercise/05-State.js",
+            solutionLocation: "src/exercise/solution/05-State-solution.js"
+        }]
     },
     {
         id: 'LifecycleMethods',
@@ -83,7 +87,11 @@ export default [
         route: '/tutorial/composing-components',
         displayName: '8 - Composing Components',
         markdownLocation: 'src/tutorial/build/08-ComposingComponents.js',
-        exercises: []
+        exercises: [{
+            tag: "exercise1",
+            location: "src/exercise/08-ComposingComponents.js",
+            solutionLocation: "src/exercise/solution/08-ComposingComponents-solution.js"
+        }]
     },
     {
         id: 'Capstone',
@@ -93,7 +101,7 @@ export default [
         exercises: [{
             tag: "exercise1",
             location: "src/capstone/Capstone.js",
-            solutionLocation: "src/capstone/Capstone.js"
+            solutionLocation: "src/capstone/solution/Capstone.js"
         }]
     },
     {

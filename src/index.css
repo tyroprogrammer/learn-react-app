@@ -16,15 +16,6 @@ code {
   padding: 0px 5px 0px 5px;
 }
 
-.App {
-  background-color: #f1f1f1;
-  min-height: 100vh;
-  /* display: flex; */
-  /* flex-direction: column; */
-  font-size: 1.1rem;
-  color: black;
-}
-
 a {
   color: #3f51b5;
   text-decoration: none;
@@ -37,3 +28,26 @@ button {
   background-color: #3f51b5;
   cursor: pointer;
 }
+
+.App {
+  background-color: #f1f1f1;
+  min-height: 100vh;
+  /* display: flex; */
+  /* flex-direction: column; */
+  font-size: 1.1rem;
+  color: black;
+}
+
+.cardHeader {
+  background-color: grey;
+
+}
+
+.cardBody {
+  background-color: green;
+}
+
+.cardFooter {
+  background-color: yellow
+}
+

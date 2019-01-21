@@ -15,7 +15,7 @@ export default class DataApi {
             .then(res => pick(res, COMPANY_PROFILE_FIELDS));
     }
 
-    static async getComapnyFinancial(company) {
+    static async getCompanyFinancial(company) {
         return DataApi.getFullCompanyProfile(company)
         .then(res => pick(res, COMPANY_FINANCIAL_FIELDS));
     }

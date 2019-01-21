@@ -80,14 +80,14 @@ return (
 
 Going back to the company profile example, the first child of the enclosing `div` is another `div`. Inside that `div` we used curly braces to display the `ticker` alongside `Profile of:`. Remember curly braces is how we inject Javascript code inside JSX. So here the `ticker` varaible would be evaluated and rendered inside that `div` tag. Then we have another `div` as a second children of the enclosing parent. Inside this `div` we again have curly braces and we executed some Javascript code. In this case we mapped each key of the `companyProfileInfo` object to a `div` element. The content of this `div` is again evaluated using another curly braces like: `{key} : {companyProfileInfo[key]}`. What we did here is told React that for each key of the `companyProfileInfo` object we want to render a `div` whose content would be the `key` followed by a colon `:` followed by corresponding value for the key on the object (`companyProfileInfo[key]`).
 
-Let's write some code here to hit the nail in the head. Please open the exercise file and fix it.
+Let's write some code here to hit the nail on the head. Please open the exercise file and follow the instructions.
 
 <!--exercise-->
 
 Key takeaways:
-- Components must return only one tag. This tag can have as many children as it likes.
-- You can run any Javascript code inside the `return` using curly braces `{//run any Javascript}`
-- Outside of the return it's exactly like any other Javascript class or function. You can do whatever you desire to do.
+- Components must return only one tag. This tag can have as many children as it likes. Instead of a tag, it can however return a string or null.
+- You can run any Javascript code inside the `return` using curly braces `{//run any Javascript}`.
+- Outside of the `return` it's exactly like any other Javascript class or function. You can do whatever you desire to do.
 
 ### Differences with HTML
 
@@ -115,17 +115,17 @@ In HTML class attribute is passed as string.
 <div class="container"></div>
 ```
 
-In JSX also class attribute is passed as string but instead of calling it `class` we call it `className`. That's because JSX is extension of Javascript and "class" is a reserved keyword.
+In JSX also class attribute is passed as string but instead of calling it `class` we call it `className`. That's because JSX is extension of Javascript and "class" is a reserved keyword in Javascript.
 
 ```jsx 
 <div className={"container"}></div>
 ```
 - Event Handler
 
-In HTML event handler attribute is all lower cased and the values are passed as string.
+In HTML event handler attribute is all lower cased and the handlers are passed as string.
 
 ```html
-<div onclick="changeHandler()"></div>
+<div onclick="clickHandler()"></div>
 ```
 
 In JSX, event handler are camelCased and instead of string we pass the actual function.
@@ -134,4 +134,4 @@ In JSX, event handler are camelCased and instead of string we pass the actual fu
 <div onClick={function(){ alert('clicked')}}></div>
 ```
 
-We will look into details about the [event handler](/tutorial/handling-events) later in the tutorial.
+We will look more into [event handler](/tutorial/handling-events) later in the tutorial.

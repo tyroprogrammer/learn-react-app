@@ -90,4 +90,8 @@ class Input extends React.Component {
 }
 ```
 
+Let's write some code. Please open the exercise file and follow the instruction on the file.
+
+<!--exercise-->
+
 Please read [this article](https://cmichel.io/es6-class-methods-differences/) to get more idea on the `ES6` binding dilemma.

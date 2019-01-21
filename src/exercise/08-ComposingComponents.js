@@ -3,63 +3,64 @@ import React, { Component } from 'react';
 /**
  *🏆
  * The goal of this exercise is to get you aquainted with composing
- * different components in React. Here we will create a table component,
- * a
+ * different components in React. Here we will create a simple Card
+ * component with Header, Body and Footer section. Nothing fancy - each
+ * secion has different background-color and each section should be 
+ * agnostic to what it's displaying. The user of the card
+ * should pass "render props" so that the Card can render contents
+ * to different section without knowing what they are displaying
  */
-class FancyInput extends Component {
-    constructor(props) {
-        super(props);
-        /**
-         * 💡 Here we have initialized the state with inputValue
-         */
-        this.state = {
-            inputValue: ''
-        }
-
-        /**
-         * ✏️ 
-         * Need to bind the handleChange function to appropriate `this`
-         */
-    }
-
-    /**
-     * ✏️ 
-     * Need to get the value of the input and set it to the state
-     * 🧭  Get the value of the input from the synthetic event
-     *     You can get the value by calling event.target.value.
-     * 🧭  Set the value to the state `inputValue` by calling `setState`
-     */
-    handleChange(e) {
-
-    }
-
+class Card extends Component {
     render() {
-
         return (
-            <React.Fragment>
-                {
-                /**
-                 * ✏️ 
-                 * Need to pass the event handler to the input element.
-                 * In this case we need to pass handleChange function to the
-                 * onChange event
-                 */
-                }
-                <input></input>
-                {
-                /**
-                 * 💡
-                 * This div will mirror the user input. For this to work though
-                 * you need to add the handleChange event on the input above
-                 * and update the state when the change happens on the input
-                 */
-                }
-                <div>User input: {this.state.inputValue}</div>
-            </React.Fragment>
-
+            <div>
+                <div style={{ backgroundColor: '#99b7c3'}}>
+                    {
+                        /**
+                         * ✏️ 
+                         * Use renderHeader props here to render header content
+                         */
+                    }
+                </div>
+                <div style={{ backgroundColor: '#9676b3'}}>
+                    {
+                        /**
+                         * ✏️ 
+                         * Use renderBody props here to render body content
+                         */
+                    }
+                </div>
+                <div style={{ backgroundColor: '#d4ce83'}}>
+                    {
+                        /**
+                         * ✏️ 
+                         * Use renderFooter props here to render footer content
+                         */
+                    }
+                </div>
+            </div>
         )
     }
 }
+
+class CardUser extends Component {
+    render() {
+        /**
+         * ✏️ 
+         * We need to pass renderHeader, renderBody and renderFooter props
+         * to the Card with what we wanted to display inside that component
+         * 🧭  Render props are functions when executed return something to render
+         * 🧭  For simplicity with each render props function you can return a div
+         *     with the text saying which section it is.
+         *     For ex renderHeader can return a <div>Header</div>:
+         *          renderHeader={() => <div>Header</div>}
+         */
+        return (
+            <Card />
+        )
+    }
+}
+
 
 /**
  * 🚨 🚨 DO NOT DELETE OR CHANGE THIS.🚨 🚨
@@ -67,7 +68,7 @@ class FancyInput extends Component {
  * The output of this code is displayed on the browser on the left hand side
  */
 const Usage = (props) => {
-    return <FancyInput />
+    return <CardUser />
 }
 
 export default Usage;
