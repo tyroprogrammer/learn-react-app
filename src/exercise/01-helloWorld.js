@@ -10,7 +10,8 @@ function HelloWorld(props) {
         /**
          * ✏️ 
          * Instead of returning null you would need to return a React element
-         * Use the React.createElement function
+         * Use the React.createElement function to display a div
+         * and Hello World text inside the div
          */
         null
     );

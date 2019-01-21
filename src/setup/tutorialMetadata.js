@@ -12,8 +12,8 @@ export default [
         markdownLocation: 'src/tutorial/build/01-HelloWorld.js',
         exercises: [{
             tag: "exercise1",
-            location: "src/exercise/01-helloWorld.js",
-            solutionLocation: "src/exercise/solution/01-helloWorld-solution.js"
+            location: "src/exercise/01-HelloWorld.js",
+            solutionLocation: "src/exercise/solution/01-HelloWorld-solution.js"
         }]
     },
     {

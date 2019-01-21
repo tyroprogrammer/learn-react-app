@@ -9,7 +9,7 @@ The way this tutorial works is that first you have to checkout this project on y
 Checkout the project to your computer using `git`:
 
 ```
-git clone
+git clone https://github.com/tyroprogrammer/learn-react-app.git
 ```
 
 ## Environment Setup

@@ -9,8 +9,7 @@ import React from 'react';
 function CompanyProfile(props) {
     /**
      * 💡 some variables to store mock data
-     * We will use these data to display the company profile
-     * information
+     * We will use these data to display the company profile information
      */
     const stockTicker = 'APPL';
     const companyProfileInfo = {

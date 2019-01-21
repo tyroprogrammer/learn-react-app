@@ -26,7 +26,7 @@ class FancyInput extends Component {
      * ✏️ 
      * Need to get the value of the input and set it to the state
      * 🧭  Get the value of the input from the synthetic event
-     *     You can get the value by calling event.target.value.
+     *     You can get the value by using event.target.value.
      * 🧭  Set the value to the state `inputValue` by calling `setState`
      */
     handleChange(e) {
@@ -54,7 +54,7 @@ class FancyInput extends Component {
                  * and update the state when the change happens on the input
                  */
                 }
-                <div>User input: {this.state.inputValue}</div>
+                <div>You typed: {this.state.inputValue}</div>
             </React.Fragment>
 
         )
