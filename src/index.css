@@ -11,4 +11,29 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+  border-radius: 8px;
+  background-color: #e4d3bc;
+  padding: 0px 5px 0px 5px;
+}
+
+.App {
+  background-color: #f1f1f1;
+  min-height: 100vh;
+  /* display: flex; */
+  /* flex-direction: column; */
+  font-size: 1.1rem;
+  color: black;
+}
+
+a {
+  color: #3f51b5;
+  text-decoration: none;
+}
+
+button {
+  padding: 10px;
+  color: white;
+  /* background-color: #49747b; */
+  background-color: #3f51b5;
+  cursor: pointer;
 }
