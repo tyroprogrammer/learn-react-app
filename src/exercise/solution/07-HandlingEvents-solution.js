@@ -19,7 +19,7 @@ class FancyInput extends Component {
         return (
             <React.Fragment>
                 <input onChange={this.handleChange}></input>
-                <div>User input: {this.state.inputValue}</div>
+                <div>You typed: {this.state.inputValue}</div>
             </React.Fragment>
 
         )

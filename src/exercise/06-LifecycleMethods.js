@@ -34,6 +34,13 @@ class CompanyProfile extends Component {
      *     This method will return a promise that resolves into `companyProfile` info
      * 🧭  Using the data from the promise use `setState` to set companyProfileInfo
      *    like - `this.setState({ companyProfileInfo: data })`
+     * 🧭  What if the promise resolves into an error? You might want to catch the error
+     *     and do something with it (Remember .catch in Promise). For example below I'm
+     *     catching an error and just logging it in console. You can do the same for the
+     *     sake of this exercise:
+     *          Api.getData()
+     *             .then(data => doSth(data))
+     *             .catch(error => console.log(error))
      * */
     componentDidMount() {
 

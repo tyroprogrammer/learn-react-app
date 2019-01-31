@@ -16,6 +16,7 @@ class CompanyProfile extends Component {
                     companyProfileInfo: data
                 })
             })
+            .catch(e => console.log(e));
     }
 
     render() {
