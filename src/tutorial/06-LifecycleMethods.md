@@ -80,4 +80,6 @@ class CompanyProfile extends React.Component {
 
 ```
 
-These are just some common use cases when you want to use lifecycle methods provided by react. Please refer to the [React documentations](https://reactjs.org/docs/react-component.html#the-component-lifecycle) for extensive list of all the lifecycle methods and also to understand when you should and shouldn't use those lifecycle methods.
+These are just some common use cases when you want to use lifecycle methods provided by react. Please refer to the
+[React documentations](https://reactjs.org/docs/react-component.html#the-component-lifecycle)
+for extensive list of all the lifecycle methods and also to understand when you should and shouldn't use those lifecycle methods.

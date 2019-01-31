@@ -11,12 +11,18 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-  border-radius: 8px;
-  background-color: #e4d3bc;
+  border-radius: 5px;
+  background-color: #ccc7c2;
   padding: 0px 5px 0px 5px;
 }
 
-a {
+blockquote {
+  border-left: solid 5px #9ba1b1;
+  padding-left: 20px;
+  font-style: italic;
+}
+
+.App a {
   color: #3f51b5;
   text-decoration: none;
 }
@@ -34,7 +40,9 @@ button {
   min-height: 100vh;
   /* display: flex; */
   /* flex-direction: column; */
-  font-size: 1.1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 24px;
   color: black;
 }
 

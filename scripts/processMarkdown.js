@@ -8,11 +8,13 @@ const MARKDOWN_FILE_EXTENSION = 'md';
 
 function checkBuildFolderExist(){
     if (!fs.existsSync(TUTORIAL_BUILD_PATH)) {
+        console.log(chalk.magenta(`Creating build directory`));
         fs.mkdirSync(TUTORIAL_BUILD_PATH);
     }
 }
 
 function cleanBuildFolder(){
+    console.log(chalk.yellow(`Cleaning up build directory`));
     fs.readdir(TUTORIAL_BUILD_PATH, function (err, items) {
         items.forEach(function(file) {
             var filePath = path.join(TUTORIAL_BUILD_PATH, file);
@@ -21,7 +23,6 @@ function cleanBuildFolder(){
                     console.log(chalk.red(`Error when deleting file %s`), filePath);
                     throw new Error(err);
                 }
-                console.log(chalk.yellow(`Deleted file - %s`), filePath);
             })
         })
     });
@@ -29,6 +30,7 @@ function cleanBuildFolder(){
 
 
 function createJSFilesFromMarkdown(){
+    console.log(chalk.green(`Building tutorial files from markdowns`));
     fs.readdir(TUTORIAL_PATH, function(err, items) {
         items.forEach(function(file) {
             var filePath = path.join(TUTORIAL_PATH, file);
@@ -43,8 +45,6 @@ function createJSFilesFromMarkdown(){
                                 console.log(chalk.red(`Error writing file  - %s`), newFilePath);
                                 throw new Error(err);
                             }
-                            console.log(chalk.green(`File sucessfully created - %s`), newFilePath);
-
                         })
                     })
                 }

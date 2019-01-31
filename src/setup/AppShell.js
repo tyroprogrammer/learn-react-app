@@ -19,7 +19,7 @@ import { Link } from 'react-router-dom';
 
 import { TutorialMetadataApi } from './TutorialMetadataApi';
 
-const drawerWidth = 240;
+const drawerWidth = 260;
 
 const styles = theme => ({
   root: {
@@ -45,6 +45,11 @@ const styles = theme => ({
   },
   hide: {
     display: 'none',
+  },
+  leftMenuNav: {
+    color: '#0052CC',
+    textDecoration: 'none',
+    fontWeight: '400'
   },
   drawer: {
     width: drawerWidth,
@@ -140,7 +145,7 @@ class PersistentDrawerLeft extends React.Component {
             {TutorialMetadataApi.getTutorialMetadata().map((tutorial, index) => (
               <ListItem button key={tutorial.displayName}>
                 <ListItemText>
-                  <Link onClick={this.handleDrawerClose} to={tutorial.route}>{tutorial.displayName}</Link>
+                  <Link className={classes.leftMenuNav} onClick={this.handleDrawerClose} to={tutorial.route}>{tutorial.displayName}</Link>
                 </ListItemText>
               </ListItem>
             ))}

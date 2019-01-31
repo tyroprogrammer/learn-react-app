@@ -43,6 +43,7 @@ class Markdown extends Component {
                                 source={s}
                                 renderers={{
                                     code: codeRenderer,
+                                    link: linkRenderer
                                 }}
                             />
                         );

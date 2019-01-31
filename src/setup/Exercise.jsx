@@ -18,10 +18,6 @@ const SolutionTitle = styled.div`
 `;
 
 class Exercise extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         const { exercise: { location, solutionLocation } } = this.props;
         return (
