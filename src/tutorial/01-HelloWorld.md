@@ -44,7 +44,7 @@ Let's step back from React for a moment and think about how we can create the si
 
 ### Good Ol' Days
 
-Let's imagine you have a barebone `html` file that looks like below. It has a `div` with id `app` inside `body`. Pretty simple.
+Let's imagine you have a barebone `html` file that looks like below. It has a `div` with id `root` inside `body`. Pretty simple.
 
 ```html
 <html>
