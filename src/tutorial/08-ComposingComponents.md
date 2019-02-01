@@ -56,7 +56,7 @@ class Dialog extends React.Component {
 ```
 Think about what we did here. `Dialog` component really doesn't know what it's `children` would be beforehand. Whoever is using this `Dialog` component can pass in any `children` that they like. Within the `render` function `Dialog` says - hey I'll display anything my user passes me as children, I don't need to know what that is.
 
-This my friend is composition and this is migthy powerful if you want to write reusable components.
+This my friend is composition and this is mighty powerful if you want to write reusable components.
 
 2. render props
 

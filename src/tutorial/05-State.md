@@ -23,7 +23,7 @@ class Component extends React.Compoent {
 
 `state` is just an object. If you notice the constructor, we initialized the state with `{counter: 0}`. And we used the state inside the `return` of the `render` function as `{this.state.counter}`.
 
-We initialized the `state` in the constructor but how do we update it? For eg. in the above example how do we change the `counter` to lets say 1? For that React provides a function called `setState`. You shoule **always** use `setState` function to change `state` and **never** mutate it directly.
+We initialized the `state` in the constructor but how do we update it? For eg. in the above example how do we change the `counter` to lets say 1? For that React provides a function called `setState`. You should **always** use `setState` function to change `state` and **never** mutate it directly.
 
 ```jsx
 //❌  NEVER DO THIS
@@ -34,7 +34,7 @@ this.setState({
     counter: 2
 });
 ```
-If `state` is just an instance variable in the component, can we call it some other name and why do we **have** to use `setState`? Well no we cannot call it by some other name and we have to use `setState` to update the `state` mainly because React understands `state`. When `state` of your component changes, React rerenders your component (by re-render I mean calls the `render` function again to see if the DOM will change as a result of change in `state`). This is fundamental to the declarative nature of React.
+If `state` is just an instance variable in the component, can we call it some other name and why do we **have** to use `setState`? Well no we cannot call it by some other name and we have to use `setState` to update the `state` mainly because React understands `state`. When `state` of your component changes, React re-renders your component (by re-render I mean calls the `render` function again to see if the DOM will change as a result of change in `state`). This is fundamental to the declarative nature of React.
 
 ### setState
 
