@@ -67,7 +67,7 @@ Most comments in the exercise files starts with one of the below signs. This is 
 ### FAQ
 
 <details>
-    <summary>Do I need to install `yarn` or `npm` would do?</summary>
+    <summary>Do I need to install `yarn` or can I use `npm`?</summary>
     <p>You don't really need yarn. Just use npm if you like.</p>
 </details>
 
