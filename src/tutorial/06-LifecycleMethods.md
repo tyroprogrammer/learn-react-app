@@ -6,10 +6,6 @@ class ComponentWithLifecycle extends React.Component {
         super(props);
     }
 
-    componentWillMount(){
-        //This will be called before the component is mounted to the DOM
-    }
-
     componentDidMount(){
         //This will be called after the component is mounted to the DOM
     }
@@ -80,6 +76,14 @@ class CompanyProfile extends React.Component {
 
 ```
 
-These are just some common use cases when you want to use lifecycle methods provided by react. Please refer to the
+These are just some common use cases when you want to use lifecycle methods provided by React. Please refer to the
 [React documentations](https://reactjs.org/docs/react-component.html#the-component-lifecycle)
-for extensive list of all the lifecycle methods and also to understand when you should and shouldn't use those lifecycle methods.
+for extensive list of all the lifecycle methods available.
+
+Also note that there are some lifecycle methods that were available as part of earlier version of React (16 and earlier) but they will be deprecated as part of version 17.0, so **DO NOT** use them.
+
+- componentWillMount
+- componentWillUpdate
+- componentWillReceiveProps
+
+Please refer to this [blog post](https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html) to understand why these lifecycle methods are being deprecated and also more about some best practices regarding usage of lifecycle methods.
