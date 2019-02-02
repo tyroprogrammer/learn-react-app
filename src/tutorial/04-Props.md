@@ -1,4 +1,4 @@
-Let continue with the earlier example where we displayed company profile of `APPL`. Let's say I want to display the Company Profile for `FB` at some other place in the application. Since we have two variables `ticker` and `companyProfileInfo` hard-coded inside this component should I copy and paste the entire component to some other place and replace the `ticker` and `companyProfileInfo` to be that of `FB`?
+Let's continue with the earlier example where we displayed company profile of `APPL`. Let's say I want to display the Company Profile for `FB` at some other place in the application. Since we have two variables `ticker` and `companyProfileInfo` hard-coded inside this component should I copy and paste the entire component to some other place and replace the `ticker` and `companyProfileInfo` to be that of `FB`?
 
  Well, no. Remember React is about building reusable Components. So we want to build a component called `CompanyProfile` that can be reused for any company ticker.
 
