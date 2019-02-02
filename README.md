@@ -48,7 +48,7 @@ Tutorial on this application are fairly straightforward to follow. Each tutorial
 The exercise panel has split view. The left hand side of the screen has your solution rendered and the right hand side of the screen has the target solution.
 Right above the exercise panel you'll see location of exercise files.
 
-Please open the execise file on your favorite editor (VS Code, Atom, Sublime, IntelliJ etc.) and start making changes by following the instructions. Exercise files are heavily commented. Read through the comments and you should be able to write up the solution. If you have any confusion you can refer to the solution file for that exercise. Every time you make changes to the exercise file and save it, the browser will reload automatically reflecting your changes.
+Please open the exercise file on your favorite editor (VS Code, Atom, Sublime, IntelliJ etc.) and start making changes by following the instructions. Exercise files are heavily commented. Read through the comments and you should be able to write up the solution. If you have any confusion you can refer to the solution file for that exercise. Every time you make changes to the exercise file and save it, the browser will reload automatically reflecting your changes.
 
 ### Exercise Comment Guide
 
