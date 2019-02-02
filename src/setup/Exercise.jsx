@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Solution from './Solution';
 
@@ -17,24 +17,23 @@ const SolutionTitle = styled.div`
     font-size: 0.9rem;
 `;
 
-class Exercise extends Component {
-    render() {
-        const { exercise: { location, solutionLocation } } = this.props;
-        return (
-            <Container>
-                <SolutionContainer>
-                    <SolutionTitle>Your Solution: ({location})</SolutionTitle>
-                    <Solution location={location} />
-                </SolutionContainer>
-                <div style={{ margin: 5 }}></div>
-                <SolutionContainer>
-                    <SolutionTitle>Target Solution: ({solutionLocation})</SolutionTitle>
-                    <Solution location={solutionLocation} finalSolution/>
-                </SolutionContainer>
-            </Container>
-
-        )
-    }
-}
+const Exercise = props => {
+    const {
+      exercise: { location, solutionLocation }
+    } = props;
+    return (
+        <Container>
+            <SolutionContainer>
+                <SolutionTitle>Your Solution: ({location})</SolutionTitle>
+                <Solution location={location} />
+            </SolutionContainer>
+            <div style={{ margin: 5 }} />
+            <SolutionContainer>
+                <SolutionTitle>Target Solution: ({solutionLocation})</SolutionTitle>
+                <Solution location={solutionLocation} finalSolution />
+            </SolutionContainer>
+        </Container>
+    );
+};
 
 export default Exercise;
