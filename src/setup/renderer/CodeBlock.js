@@ -18,6 +18,7 @@ function CodeBlock (props){
         />
     )
 }
+
 CodeBlock.defaultProps = {
     language: 'js',
     value: ''
