@@ -54,7 +54,7 @@ Second - if you inspect the above code snippet carefully, we see that when the `
 
 2. Component created as React.Component
 
-    If you created your Component by extending `React.Component` then all the `props` would be avaible as `this.props`. The equivalent of above `Children` function using `React.Component` would look like this:
+    If you created your Component by extending `React.Component` then all the `props` would be available as `this.props`. The equivalent of above `Children` function using `React.Component` would look like this:
 
 ```jsx
 class Children extends React.Component {
