@@ -43,7 +43,7 @@ class Search extends Component {
          * ✏️ 
          * You need to invoke the `handleSearch` props passed by the parent
          * Pass the latest `stateTicker` state when you invoke that function
-         * this.props.handleSearch(this.state.stockTicker)
+         * this.props.onSearch(this.state.stockTicker)
          */
     }
 
