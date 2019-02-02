@@ -2,7 +2,7 @@
 
 ### Component 
 
-Components are building block of your UI - similar to directives in angular, or modules and widgets in other frameworks. Components in React are more or less self sufficient in that it constitues the presentation (HTML) as well as the behavior (eg. event handlers). They are also composable - meaning we can easily use one component within other component. So how do we create a Component? There are couple common ways how you can create a React component.
+Components are building block of your UI - similar to directives in angular, or modules and widgets in other frameworks. Components in React are more or less self sufficient in that they constitute the presentation (HTML) as well as the behavior (eg. event handlers). They are also composable - meaning we can easily use one component within other component. So how do we create a Component? There are couple common ways how you can create a React component.
 
 #### 1. React.Component
 
