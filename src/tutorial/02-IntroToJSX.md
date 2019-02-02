@@ -1,4 +1,4 @@
-In the [previous section](/tutorial/hello-world) we created our first Hello World function component. Remember we returned `React.createElement` from the function to tell React what the DOM should look like when we render this component. Another alternative way of telling React what the DOM should look like is by using JSX. JSX is a very common and recommended way (preferred than `React.createElement` syntax in most cases) to write React code. JSX is a funny looking syntax though - its not purely HTML, its not purely Javascript. But its extension of Javascript where you can write HTML like syntax with full power of Javascript. For example, the equivalent of return statement we saw in [previous page](/tutorial/hello-world) (using `React.createElement`) in JSX would be:
+In the [previous section](/tutorial/hello-world) we created our first Hello World function component. Remember we returned `React.createElement` from the function to tell React what the DOM should look like when we render this component. Another alternative way of telling React what the DOM should look like is by using JSX. JSX is a very common and recommended way (preferred over `React.createElement` syntax in most cases) to write React code. JSX is a funny looking syntax though - it's not purely HTML, it's not purely Javascript. But it's an extension of Javascript where you can write HTML like syntax with full power of Javascript. For example, the equivalent of return statement we saw in [previous page](/tutorial/hello-world) (using `React.createElement`) in JSX would be:
 
 ```jsx
 return (
@@ -6,13 +6,13 @@ return (
 )
 ```
 
-Instead of returing Javascript code, its returing HTML-like code (it's not HTML) and notice it's not a string. Wait, what?!! Welcome to JSX!
+Instead of returing Javascript code, it's returing HTML-like code (it's not HTML) and notice it's not a string. Wait, what?!! Welcome to JSX!
 
 You don't trust that this weird syntax works, do you? Open the exercise file and edit the return statement with the JSX and save to see the magic happen!
 
 <!--exercise-->
 
-Although you write HTML looking syntax, your JSX code is compiled into Javascript function like the one we saw in the previous page. The above JSX code is compiled into:
+Although you write HTML looking syntax, your JSX code is compiled into a Javascript function like the one we saw in the previous page. The above JSX code is compiled into:
 
 ```jsx
 return React.createElement('div', null, 'Hello World');
@@ -50,4 +50,4 @@ React.createElement('table', null,
         )
     ]
 ```
-So in essence JSX is nothing more than a syntatic sugar for complicated `React.createElement` functions to make React code more elegant and readable.
+So in essence JSX is nothing more than a syntactic sugar for complicated `React.createElement` functions to make React code more elegant and readable.

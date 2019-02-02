@@ -12,9 +12,9 @@ function CompanyProfile(props) {
     const ticker = 'APPL';
     const companyProfileInfo = {
         'Company Name': 'Apple Inc.',
-        'Exchange': "Nasdaq",
+        'Exchange': 'Nasdaq',
         'Sector': 'Technology',
-        'Industry': "Computer Hardware",
+        'Industry': 'Computer Hardware',
         'CEO': 'Timothy D. Cook'
     };
     return (
