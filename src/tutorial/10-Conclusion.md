@@ -23,6 +23,6 @@ There are several other resources that I mentioned during the tutorial and some 
 - [How does setState know what to do?](https://overreacted.io/how-does-setstate-know-what-to-do/)
 - [ES6 method binding](https://cmichel.io/es6-class-methods-differences/)
 
-Again this is not an exhaustive list and I am sure there are plenty of other good resources on the web. If you find any resources that you think will be useful for begineers please [create a PR](https://github.com/tyroprogrammer/learn-react-app) 😊. 
+Again this is not an exhaustive list and I am sure there are plenty of other good resources on the web. If you find any resources that you think will be useful for beginners please [create a PR](https://github.com/tyroprogrammer/learn-react-app) 😊.
 
 Happy coding and good luck!
