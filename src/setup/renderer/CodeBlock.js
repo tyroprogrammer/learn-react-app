@@ -12,11 +12,14 @@ Lowlight.registerLanguage('html', xml);
 function CodeBlock (props){
     return (
         <Lowlight
-            language={props.language || 'js'}
-            value={props.value || ''}
+            language={props.language}
+            value={props.value}
             inline={props.inline}
         />
     )
 }
-
+CodeBlock.defaultProps = {
+    language: 'js',
+    value: ''
+}
 export default CodeBlock;
