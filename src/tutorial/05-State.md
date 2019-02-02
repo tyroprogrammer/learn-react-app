@@ -124,4 +124,4 @@ The difference between `state` and `props` is that `state` is owned by the compo
 
 And the similarity (sort of) is that React automatically re-renders your component when either the component's `state` changes or when the component's `props` changes.
 
-You component's `render` function is a function of both `state` and `props` meaning it defines what your component should look like given the `state` and `props`. It should be pure function in a sense that if the component has same `state` and `props` it should render exactly same content no matter how many times it's called and shouldn't have any side effects.
+Your component's `render` function is a function of both `state` and `props` meaning it defines what your component should look like given the `state` and `props`. It should be pure function in a sense that if the component has same `state` and `props` it should render exactly same content no matter how many times it's called and shouldn't have any side effects.
