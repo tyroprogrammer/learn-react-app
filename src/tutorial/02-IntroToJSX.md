@@ -34,7 +34,7 @@ So writing above JSX code or `React.createElement` code will generate exactly sa
     </tbody>
 </table>
 ```
-You'd have to write something this this, which is not very pretty:
+You'd have to write something like this, which is not very pretty:
 ```js
 React.createElement('table', null, 
     [
