@@ -12,7 +12,7 @@ function HelloWorld(props){
 ```
 Now the question is what do we return from this function.
 
-The return of this function is telling React what the DOM should look like when this component is rendered on the browser. In case if you're using `React.Component` approach (instead of `function` approach like above), it's what you return from `render` function that tells React what the DOM should look like when the component is rendered.
+The return of this function is telling React what the DOM should look like when this component is rendered on the browser. In case you're using `React.Component` approach (instead of `function` approach like above), it's what you return from `render` function that tells React what the DOM should look like when the component is rendered.
 
 In our case let's say we want to render a `div` element that has `Hello World` text like `<div>Hello World</div>`
 
