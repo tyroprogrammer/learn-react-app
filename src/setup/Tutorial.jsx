@@ -27,18 +27,18 @@ const Tutorial = ({ match }) => {
     const nextTutorial = TutorialMetadataApi.getNextTutorial(route);
     const previousTutorial = TutorialMetadataApi.getPreviousTutorial(route);
     return (
-      <Container>
-        <AppShell title={currentTutorial.displayName} />
-        <TutorialContainer>
-          <Markdown tutorialMetadata={currentTutorial} />
-        </TutorialContainer>
-        <BottomNavigation>
-          <TutorialNavigation
-            nextTutorial={nextTutorial}
-            previousTutorial={previousTutorial}
-          />
-        </BottomNavigation>
-      </Container>
+        <Container>
+            <AppShell title={currentTutorial.displayName} />
+            <TutorialContainer>
+                <Markdown tutorialMetadata={currentTutorial} />
+            </TutorialContainer>
+            <BottomNavigation>
+                <TutorialNavigation
+                  nextTutorial={nextTutorial}
+                  previousTutorial={previousTutorial}
+                />
+            </BottomNavigation>
+        </Container>
   );
 };
 

@@ -22,27 +22,27 @@ const linkStyle = {
 
 const TutorialNavigation = ({ previousTutorial, nextTutorial }) => {
     return (
-      <Container>
-        <Navigation>
-          {previousTutorial && (
-            <Link style={linkStyle} to={`${previousTutorial.route}`}>
-              ← {previousTutorial.displayName}
-            </Link>
-          )}
-        </Navigation>
-        <Navigation>
-          <Link style={linkStyle} to="/">
-            Home
-          </Link>
-        </Navigation>
-        <Navigation>
-          {nextTutorial && (
-            <Link style={linkStyle} to={`${nextTutorial.route}`}>
-              {nextTutorial.displayName} →
-            </Link>
-          )}
-        </Navigation>
-      </Container>
+        <Container>
+            <Navigation>
+              {previousTutorial && (
+                  <Link style={linkStyle} to={`${previousTutorial.route}`}>
+                    ← {previousTutorial.displayName}
+                  </Link>
+              )}
+            </Navigation>
+            <Navigation>
+                <Link style={linkStyle} to="/">
+                  Home
+                </Link>
+            </Navigation>
+            <Navigation>
+                {nextTutorial && (
+                  <Link style={linkStyle} to={`${nextTutorial.route}`}>
+                    {nextTutorial.displayName} →
+                  </Link>
+                )}
+            </Navigation>
+        </Container>
     );
 };
 
