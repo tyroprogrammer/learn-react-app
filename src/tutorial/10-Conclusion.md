@@ -12,20 +12,26 @@ Also if you want to explore some real world application written in React, guess 
 
 ## Resources
 
-The best place to find further details on any given React related topic is the official [React website](https://reactjs.org/). That's a highly valuable resources and you'll find yourself refering to this website even long after you are comfortable with React.
+**The best place to find further details on any given React related topic is the official [React website](https://reactjs.org/).** That's a highly valuable resources and you'll find yourself refering to this website even long after you are comfortable with React.
 
-If you think you need to go through some other material before you feel more confident about React, there are couple important sections in React website that I think are highly valuable especially during your early days:
+There are several resources that I think are extremely helpful - some are linked to during the tutorial and some are not:
 
-- Go to [React Documentation](https://reactjs.org/docs/hello-world.html) and go through the "Main concept" sections. The content in that section is similar to what we discussed here in this tutorial but there might be useful nuggets of information that I have missed here.
+### Fundamentals
+- Go to official [React documentation](https://reactjs.org/docs/hello-world.html) and go through the "Main concept" sections. There are useful nuggets of information that I have missed in this tutorial.
 - Go through the [official tutorial](https://reactjs.org/tutorial/tutorial.html) in the React website.
+- [Some usage and best practices on lifecycle method usage](https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html)
 
-There are several other resources that I mentioned during the tutorial and some I haven't mentioned:
-
-- [Lifecycle method reference](https://reactjs.org/docs/react-component.html#commonly-used-lifecycle-methods)
+### Advanced
+*(You don't need to know any of this to be able to write applications in React.)*
+- [Decisions made by React for it's diffing algorithm](https://reactjs.org/docs/reconciliation.html) to figure out what changed in the DOM.
 - [Why is setState function asynchronous?](https://github.com/facebook/react/issues/11527#issuecomment-360199710)
 - [How does setState know what to do?](https://overreacted.io/how-does-setstate-know-what-to-do/)
+- We briefly glossed over [how React conceptually works](/tutorial/hello-world) but if you are itching to go deep into it [you can hear straight from the horse's mouth](https://overreacted.io/react-as-a-ui-runtime/). 
+
+
+### Misc
 - [ES6 method binding](https://cmichel.io/es6-class-methods-differences/)
 
-Again this is not an exhaustive list and I am sure there are plenty of other good resources on the web. If you find any resources that you think will be useful for beginners please [create a PR](https://github.com/tyroprogrammer/learn-react-app) 😊.
+This is not an exhaustive list and I am sure there are plenty of other good resources on the web. If you find any resources that you think will be useful for beginners please [create a PR](https://github.com/tyroprogrammer/learn-react-app) 😊.
 
 Happy coding and good luck!
