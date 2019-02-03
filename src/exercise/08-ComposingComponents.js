@@ -5,7 +5,7 @@ import React, { Component } from 'react';
  * The goal of this exercise is to get you aquainted with composing
  * different components in React. Here we will create a simple Card
  * component with Header, Body and Footer section. Nothing fancy - each
- * secion has different background-color and each section should be 
+ * section has different background-color and each section should be 
  * agnostic to what it's displaying. The user of the card
  * should pass "render props" so that the Card can render contents
  * to different section without knowing what they are displaying
