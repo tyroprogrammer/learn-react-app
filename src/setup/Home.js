@@ -53,8 +53,8 @@ class Home extends Component {
                 <TutorialNavigation>
                     {
                         tutorialMetadata.map((data, index) => {
-                            return <TutorialLink>
-                                <Link key={data.id} to={data.route}>{data.displayName}</Link>
+                            return <TutorialLink key={data.id}>
+                                <Link to={data.route}>{data.displayName}</Link>
                             </TutorialLink>
                         })
                     }
