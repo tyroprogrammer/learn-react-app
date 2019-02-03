@@ -44,7 +44,7 @@ function Parent(props) {
     )
 }
 ```
-There are couple things going on here. First - remember on the first page of this tutorial we said that we can compose components (we can use one component inside the other)? Well that's what we are doing here. `Parent` component uses `Children` component inside it's return.
+There are couple things going on here. First - remember on the [first page of this tutorial](/tutorial/react-introduction) we said that we can compose components (we can use one component inside the other)? Well that's what we are doing here. `Parent` component uses `Children` component inside it's return.
 
 Second - if you inspect the above code snippet carefully, we see that when the `Parent` uses the `Children` (inside `return`) it's also passing something called `textToDisplay` with some value `Hello`. We call this "passing the props". So `Parent` is passing a `props` called `textToDisplay` to the `Children`. How, then, does the `Children` use the value that the `Parent` passes down to it?
 
@@ -69,3 +69,79 @@ class Children extends React.Component {
 Now that we know what `props` are, lets do some exercise and see how we can make `CompanyProfile` component reusable.
 
 <!--exercise-->
+
+
+One thing you must remember regarding `props` is that you should **never** mutate `props` - React will complain if you do. This is something given to the component by it's parent - accept with love and don't try to mess around with things to make your parent angry!
+
+```jsx
+function Children(props) {
+    //❌  NEVER DO THIS
+    props.textToDisplay = 'I want to mutate props'
+    return (
+        <div>{props.textToDisplay}</div>
+    )
+}
+```
+
+### PropTypes
+In many cases it's better for a component to clearly define a contract regarding the `props` it can accept - data type, data structure, if the props is required etc. 
+There are couple obvious benefits of this:
+- React can enforce type checking to avoid many bugs arising from parents passing props with a type that's different from what the children expects (ex. parent passing `string` when children expects an `object`).
+- If you are writing components that will be used by different people at different parts of the application, it's always useful for those users to know what are the props they can pass, what is the expected structure of the props etc.
+
+To define this contract - first you need to add `prop-types` as a [project dependency (provided by React team)](https://www.npmjs.com/package/prop-types) and you need to define a special property called `propTypes` in your component.
+
+```jsx
+import React from 'react';
+import PropTypes from 'prop-types';
+
+class SoftwareEngineer extends React.Component {
+    render(){
+        return (...)
+    }
+}
+
+//defines "propTypes" property in this component
+SoftwareEngineer.propTypes = {
+    name: PropTypes.string.isRequired, //expects string and is required
+    hobbies: PropTypes.arrayOf(PropTypes.string), //expects array of string
+    address: PropTypes.shape({
+        street: PropTypes.string,
+        city: PropTypes.string
+    }) //must be an object with 'street' and 'city' fields
+}
+```
+Here we have defined the `propTypes` property and assigned an object. Each key in this object represents the name of the `props` the user of this component can pass. The value defines the "type" of the `props` - you know `string`, `number`, `array` etc. All `props` are optional (user of the component doesn't have to pass them) except the one that has `.isRequired`. Here's a quick explanation on three `props` defined above:
+- `name` - It expects the value of this `props` to be a `string` and it's required because, well, it has `.isRequired`.
+- `hobbies` - It's optional but if passed it must be an array of strings.
+- `address` - It's also optional but if passed it must be an object with two fields - `street` and `city` and both must be string.
+
+These are just some examples of what you can do to enable type checking. There are plenty more types you can define - please check out [the documentation](https://reactjs.org/docs/typechecking-with-proptypes.html#proptypes) for more.
+
+### Default Props
+In some cases you might want to define a default value for a `props` in case it is not passed to you.
+You can use `defaultProps` property to define your defaults. With this you're basically saying - "if someone doesn't pass me a value for a `props` that I'm expecting, then I want the value of that `props` to be what I have defined in the `defaultProps`". For example - for above component we can define `defaultProps` as follows:
+
+```jsx
+import React from 'react';
+import PropTypes from 'prop-types';
+
+class SoftwareEngineer extends React.Component {
+    render(){
+        //if this props is not passed, it will print default value as defined by `defaultProps`
+        console.log(this.props.hobbies);
+
+        //if this props is not passed, it will print `undefined` because we haven't defined any default value for this props
+        console.log(this.props.address); 
+        return (...)
+    }
+}
+
+//defines "defaultProps" property in this component
+SoftwareEngineer.defaultProps = {
+    hobbies: ['Writing React code']
+}
+```
+
+Let's say if the user of this component doesn't pass any value for `hobbies`, then it will be defaulted to `['Writing React code']`.
+And if the user of the component doesn't pass any value for `address` then it will resolve to `undefined` because we haven't defined the default value for it.
