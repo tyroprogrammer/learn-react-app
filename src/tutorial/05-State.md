@@ -7,7 +7,7 @@ Remember when we looked at different ways of creating React component in the fir
 Below is a simple component that has a state. 
 
 ```jsx
-class Component extends React.Compoent {
+class Component extends React.Component {
     constructor(props){
         super(props);
         this.state = {
