@@ -6,7 +6,7 @@ return (
 )
 ```
 
-Instead of returing Javascript code, it's returing HTML-like code (it's not HTML) and notice it's not a string. Wait, what?!! Welcome to JSX!
+Instead of returning Javascript code, it's returning HTML-like code (it's not HTML) and notice it's not a string. Wait, what?!! Welcome to JSX!
 
 You don't trust that this weird syntax works, do you? Open the exercise file and edit the return statement with the JSX and save to see the magic happen!
 
