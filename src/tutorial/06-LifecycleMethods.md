@@ -61,7 +61,7 @@ class CompanyProfile extends React.Component {
     componentDidUpdate(prevProps, prevState) {
         //always be defensive otherwise you will make a lot of 
         //unnecessary network calls
-        //in this case we only make the network call only if the
+        //in this case we only make the network call if the
         //ticker props before and after the component updated are not same
         if (prevProps.ticker !== this.props.ticker) {
             DataApi.getCompanyProfile(this.props.ticker)
