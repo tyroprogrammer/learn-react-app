@@ -20,7 +20,7 @@ Ex:
 - `onselect` => `onSelect`
 - `onchange` => `onChange`
 
-2. With HTML we would pass a string as a value of the attribute but in JSX we passed actual function. For ex contrast above `button` in JSX to the following HTML equivalent:
+2. With HTML we would pass a string as a value of the attribute but in JSX we passed actual function. For example compare the above `button` in JSX to the following HTML equivalent:
 
 ```html
 <button onclick="handleClick()"></button>
