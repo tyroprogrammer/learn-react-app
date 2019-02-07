@@ -17,16 +17,16 @@ class CompanyProfile extends Component {
     }
 
     componentDidMount() {
-        this.fetchCompanyFinancial();
+        this.fetchCompanyProfile();
     }
 
     componentDidUpdate(prevProps, prevState) {
         if (this.props.stockTicker !== prevProps.stockTicker) {
-            this.fetchCompanyFinancial();
+            this.fetchCompanyProfile();
         }
     }
 
-    fetchCompanyFinancial() {
+    fetchCompanyProfile() {
         const { stockTicker } = this.props;
         this.updateErrorMsg('');
         if (stockTicker) {
