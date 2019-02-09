@@ -5,9 +5,9 @@ import React from 'react';
 
 function HelloWorld(props){
     //function must return something
-    return(
+    return (
         //return should tell React to render Hello World in the browser
-    )
+    );
 }
 ```
 Now the question is what do we return from this function.
