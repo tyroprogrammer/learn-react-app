@@ -2,7 +2,6 @@
   "name": "learn-react-app",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://financialmodelingprep.com",
   "dependencies": {
     "@material-ui/core": "^3.9.0",
     "@material-ui/icons": "^3.0.2",

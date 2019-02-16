@@ -1,36 +1,34 @@
-import pick from 'lodash/pick';
+import CompanyDataGenerator from './CompanyDataGenerator';
 
-const COMPANY_FINANCIAL_FIELDS = [
-    'Price', 'Beta', 'VolAvg', 'MktCap', 'LastDiv', 'Range', 'Changes', 'ChangesPerc'
-]
-
-const COMPANY_PROFILE_FIELDS = [
-    'companyName', 'description', 'exchange', 'industry', 'website', 'sector'
-]
-
-const API_BASE = `/api/company/profile`;
 export default class DataApi {
     static async getCompanyProfile(company) {
-        return DataApi.getFullCompanyProfile(company)
-            .then(res => pick(res, COMPANY_PROFILE_FIELDS));
+        return new Promise((resolve, reject) => {
+            if (!company || company.trim().length !== 3) {
+                reject('Ticker cannot be empty and must be 3 character long');
+            }
+            try {
+                const result = CompanyDataGenerator.getCompanyProfile(company);
+                resolve(result);
+            } catch(e) {
+                console.error(e);
+                reject(e);
+            }
+        })
     }
 
     static async getCompanyFinancial(company) {
-        return DataApi.getFullCompanyProfile(company)
-        .then(res => pick(res, COMPANY_FINANCIAL_FIELDS));
-    }
-
-    static async getFullCompanyProfile(company) {
-        return fetch(`${API_BASE}/${company.trim()}`, {mode: 'cors', headers: { 'Content-Type': 'application/json'}})
-            .then(res => {
-                if (!res.ok) {
-                    throw new Error('error when fetching data');
-                }
-                return res.text()
-            })
-            .then(textRes => textRes.replace(/<pre>/g, '').replace(/<\/pre>/g, ''))
-            .then(res => JSON.parse(res))
-            .then(res => res[company.trim()]);
+        return new Promise((resolve, reject) => {
+            if (!company || company.trim().length !== 3) {
+                reject('Ticker cannot be empty and must be 3 character long');
+            }
+            try {
+                const result = CompanyDataGenerator.getCompanyFinancial(company);
+                resolve(result);
+            } catch(e) {
+                console.error(e);
+                reject(e);
+            }
+        })
     }
 }
 

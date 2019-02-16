@@ -45,7 +45,7 @@ class CompanyProfile extends Component {
  * the output of this code is displayed on the browser
  */
 const Usage = (props) => {
-    return <CompanyProfile stockTicker={'AMZN'} />
+    return <CompanyProfile stockTicker={'AMZ'} />
 }
 
 export default Usage;
