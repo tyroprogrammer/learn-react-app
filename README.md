@@ -1,4 +1,17 @@
-# Welcome to Learn React App!
+<div style="text-align:center">
+    <h1>Welcome to Learn React App!</h1>
+
+<!-- prettier-ignore-start -->
+[![MIT License][license-badge]][license]
+[![Last commit][github-last-commit-badge]][github-commit]
+
+[![Github Contributors][github-contributors-badge]][github-contributors]
+[![Watch on GitHub][github-watch-badge]][github-watch]
+[![Star on GitHub][github-star-badge]][github-star]
+<!-- prettier-ignore-end -->
+</div>
+
+<hr/>
 
 The goal of this tutorial is to quickly get you off the ground with `React` concepts. This tutorial has hands-on exercises which I consider to be the most important part of this tutorial.
 
@@ -105,3 +118,18 @@ Most comments in the exercise files start with one of the below signs. This is t
 ## Contribution
 
 If you went through the exercise and saw some inconsistencies or if you have an idea to make the overall tutorial better please feel free to open a PR.
+
+
+<!--LINKS -->
+<!-- prettier-ignore-start -->
+[license-badge]: https://img.shields.io/github/license/tyroprogrammer/learn-react-app.svg?style=flat
+[license]: https://github.com/tyroprogrammer/learn-react-app/blob/master/LICENSE
+[github-watch-badge]: https://img.shields.io/github/watchers/tyroprogrammer/learn-react-app.svg?style=social
+[github-watch]: https://github.com/tyroprogrammer/learn-react-app/watchers
+[github-star-badge]: https://img.shields.io/github/stars/tyroprogrammer/learn-react-app.svg?style=social
+[github-star]: https://github.com/tyroprogrammer/learn-react-app/stargazers
+[github-last-commit-badge]: https://img.shields.io/github/last-commit/tyroprogrammer/learn-react-app.svg?style=flat
+[github-commit]: https://github.com/tyroprogrammer/learn-react-app/commits/master
+[github-contributors-badge]: https://img.shields.io/github/contributors/tyroprogrammer/learn-react-app.svg?style=social
+[github-contributors]: https://github.com/tyroprogrammer/learn-react-app/graphs/contributors
+<!-- prettier-ignore-end -->
