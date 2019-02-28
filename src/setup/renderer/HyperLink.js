@@ -11,7 +11,7 @@ const StyledHyperlink = styled.a`
 export function HyperLink(props) {
     const { href, children } = props;
     return (
-        <StyledHyperlink href={href} target={'_blank'}>{children}</StyledHyperlink>
+        <StyledHyperlink href={href} target={href.startsWith('/tutorial/')?'_self':'_blank'}>{children}</StyledHyperlink>
     );
 }
 
