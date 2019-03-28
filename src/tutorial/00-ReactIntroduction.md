@@ -2,11 +2,11 @@
 
 ### Component 
 
-Components are building block of your UI - similar to directives in angular, or modules and widgets in other frameworks. Components in React are more or less self sufficient in that they constitutes the presentation (HTML) as well as the behavior (eg. event handlers). They are also composable - meaning we can easily use one component within other component. So how do we create a Component? There are couple common ways how you can create a React component.
+Components are building block of your UI - similar to directives in angular, or modules and widgets in other frameworks. Components in React are more or less self sufficient in that they constitute the presentation (HTML) as well as the behavior (eg. event handlers). They are also composable - meaning we can easily use one component within other component. So how do we create a Component? There are couple common ways how you can create a React component.
 
 #### 1. React.Component
 
-One way to create a React component is to create ES6 `class` and extend `React.Component`. Each component created using this method should have a `render` function that returns what the DOM should look like if this component is rendered on the browser.
+One way to create a React component is to create an ES6 `class` and extend `React.Component`. Each component created using this method should have a `render` function that returns what the DOM should look like if this component is rendered on the browser.
 
 ```jsx
 import React from 'react';
@@ -35,6 +35,6 @@ function Component(props) {
 ```
 *Note: Components that are user-defined - meaning the components that you and I write and are not available in the React implementation itself - must have [first letter capital](https://reactjs.org/docs/jsx-in-depth.html#user-defined-components-must-be-capitalized).*
 
-The above two approaches are identical except there are certain things that `React.Component` can do that the `function` cannot do but we will park that for now and we'll come back to it later in this tutorial.
+The above two approaches are identical except there are certain things that `React.Component` can do that the `function` cannot do but we will park that for now and come back to it later in this tutorial.
 
 Lets build our first `HelloWorld` React Component.
