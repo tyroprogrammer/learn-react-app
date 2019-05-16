@@ -22,7 +22,7 @@
   "scripts": {
     "start": "npm run build:markdown && react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --passWithNoTests",
     "eject": "react-scripts eject",
     "build:markdown": "node scripts/processMarkdown"
   },
