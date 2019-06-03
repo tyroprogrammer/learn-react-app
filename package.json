@@ -20,7 +20,7 @@
     "react-markdown": "^4.0.6",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "^2.1.5",
+    "react-scripts": "^3.0.1",
     "styled-components": "^4.1.3",
     "typescript": "^3.4.5"
   },
@@ -28,7 +28,7 @@
     "start": "npm run build:markdown && react-scripts start",
     "start:ts": "npm run build:markdown && REACT_APP_TS=true react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --passWithNoTests",
     "eject": "react-scripts eject",
     "build:markdown": "node scripts/processMarkdown"
   },
