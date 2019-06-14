@@ -9,7 +9,7 @@ For example lets imagine we want to display a company profile information and a 
 ```jsx
 function CompanyProfile(props) {
     //ticker and companyProfileInfo stored in a variable
-    const ticker = 'APPL';
+    const ticker = 'AAPL';
     const companyProfileInfo = {
         'Company Name': 'Apple Inc.',
         'Exchange': 'Nasdaq',
@@ -38,7 +38,7 @@ The HTML output of the above Component when it's rendered will be:
 
 ```html
 <div>
-    <div>Profile of: APPL</div>
+    <div>Profile of: AAPL</div>
     <div>
         <div>Company Name: Apple Inc.</div>
         <div>Exchange: Nasdaq</div>
@@ -49,7 +49,7 @@ The HTML output of the above Component when it's rendered will be:
 </div>
 ```
 
-Well that's a handful, so let's review what's happening here. We have a `ticker` variable assigned to a value `APPL` and an object `companyProfileInfo` that has company profile. Inside the JSX (inside the `return` statement) we have a `div` enclosing everything. In JSX, **a component must return one and only one enclosing tag**. That tag can have as many children as it wants.
+Well that's a handful, so let's review what's happening here. We have a `ticker` variable assigned to a value `AAPL` and an object `companyProfileInfo` that has company profile. Inside the JSX (inside the `return` statement) we have a `div` enclosing everything. In JSX, **a component must return one and only one enclosing tag**. That tag can have as many children as it wants.
 ```jsx
 // ❌ This is illegal in React since the return has more than one tag.
 return ( 
