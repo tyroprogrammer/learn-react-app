@@ -73,7 +73,7 @@ After this is complete, the application will be deployed on port `3000`. Open a 
 
 You can also run this tutorial in Gitpod, a free online dev environment for GitHub:
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://github.com/tyroprogrammer/learn-react-app/blob/master/src/exercise/01-HelloWorld.js)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/tyroprogrammer/learn-react-app/blob/master/src/exercise/01-HelloWorld.js)
 
 -----
 
