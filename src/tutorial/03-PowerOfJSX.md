@@ -69,7 +69,7 @@ return (
 )
 
 // ✅  If you don't want to wrap your component with some enclosing tag like `div`
-// you can wrap everything with `React.Fragment` which is a empty tag provided by React
+// you can wrap everything with `React.Fragment` which is an empty tag provided by React
 return (
     <React.Fragment>
         <div></div>
