@@ -63,7 +63,7 @@ class FancyInput extends Component {
 
 /**
  * 🚨 🚨 DO NOT DELETE OR CHANGE THIS.🚨 🚨
- * This is how you would use your above component 
+ * This is how you would use your above component
  * The output of this code is displayed on the browser on the left hand side
  */
 const Usage = (props) => {

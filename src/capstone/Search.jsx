@@ -6,7 +6,7 @@ import style from './solution/style';
  * This component houses the input and the Search button.
  * When the user types in something we handle the change event and
  * store the values typed in the input field to the state
- * When user clicks the Search button it will invoke a callback function 
+ * When user clicks the Search button it will invoke a callback function
  * that was passed to this component as a props with the latest input value
  * as an argument
  */

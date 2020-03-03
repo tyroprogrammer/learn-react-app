@@ -49,38 +49,38 @@ class CompanyProfile extends Component {
          */
     }
 
-    /* 
+    /**
     * 💡 
     * This is another lifecycle method. React will invoke this lifecyle method
     * after the component is updated. Remember the component will be updated
     * every time either the props changes or the state changes for this component
     */
     componentDidUpdate(prevProps, prevState) {
-    /**
-     * ✏️ 
-     * You need to call the fetchCompanyProfile method to fetch the 
-     * comanyProfile data when the parent passes you a different stockTicker
-     * 🧭  Remember to check if the stockTicker props changed before calling the 
-     *     fetchCompanyProfile method though. You DON'T want to fetch the data
-     *     if the stockTicker hasn't changed. If you don't check whether props
-     *     changed your component will go in an infinite loop - it will be
-     *     fetching the same data over and over again.
-     * This lifecycle method will be given multiple arguments.
-     * First argument is the value of props before this component updated
-     * Second argument is the value of the state before this component updated
-     * In our case we just want to check props to see if value for stockTicker 
-     * changed and the way to do this is:
-     *  if (this.props.stockTicker !== prevProps.stockTicker) {
-     *     //Fetch data here only if the current props is not same as previous props
-     *  }
-     */
+        /**
+         * ✏️ 
+         * You need to call the fetchCompanyProfile method to fetch the
+         * comanyProfile data when the parent passes you a different stockTicker
+         * 🧭  Remember to check if the stockTicker props changed before calling the
+         *     fetchCompanyProfile method though. You DON'T want to fetch the data
+         *     if the stockTicker hasn't changed. If you don't check whether props
+         *     changed your component will go in an infinite loop - it will be
+         *     fetching the same data over and over again.
+         * This lifecycle method will be given multiple arguments.
+         * First argument is the value of props before this component updated
+         * Second argument is the value of the state before this component updated
+         * In our case we just want to check props to see if value for stockTicker
+         * changed and the way to do this is:
+         *  if (this.props.stockTicker !== prevProps.stockTicker) {
+         *     //Fetch data here only if the current props is not same as previous props
+         *  }
+         */
     }
 
     /**
      * 💡 
      * This is a method to fetch the company profile data from the API.
      * Couple things to note here:
-     * 1. We are updating the errorMsg state to empty string. This is jus to 
+     * 1. We are updating the errorMsg state to empty string. This is jus to
      *    reset any error message we might have from previous search
      * 2. We invoke the API only when the stockTicker is truthy. No point in
      *    calling the API if we don't have any value for stockTicker
@@ -104,7 +104,7 @@ class CompanyProfile extends Component {
      * Updates the companyProfile state with the argument provided
      */
     updateCompanyProfile(companyProfile) {
-        this.setState({ companyProfile })
+        this.setState({ companyProfile });
     }
 
     /**
@@ -135,7 +135,7 @@ class CompanyProfile extends Component {
         /**
          * ✏️ 
          * We want to render an error message if the API returns some error.
-         * We want to check if we have `errorMsg` state is not empty and 
+         * We want to check if we have `errorMsg` state is not empty and
          * if it's not render the message inside a div
          * 🧭 There's an `isEmpty` function that's already imported. Use that
          *  to check if the `errorMsg` state is empty
@@ -143,7 +143,7 @@ class CompanyProfile extends Component {
          * 🧭  If it is empty assign null to ErrorMsg
          * 🧭  If the errorMsg is not empty assign <div>{this.state.errorMsg}</div>
          *     to the ErrorMsg constant.
-         * You can either use ternery operator - 
+         * You can either use ternery operator -
          *      const a = isEmpty(b) ? c : null;
          * OR you can use '&&' operator -
          *      const a = isEmpty(b) && c;
@@ -156,7 +156,7 @@ class CompanyProfile extends Component {
          * 💡 
          * Here we are doing same thing as the ErrorMsg above
          * Instead of checking for `errorMsg` we are checking for `companyProfile`
-         * state. We are displaying the `div` only if the `companyProfile` 
+         * state. We are displaying the `div` only if the `companyProfile`
          * state is not empty.
          */
 

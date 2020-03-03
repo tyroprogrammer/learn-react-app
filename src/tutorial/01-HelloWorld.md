@@ -26,7 +26,7 @@ You should try this for yourself. Open the exercise file and edit the function t
 
 <!--exercise-->
 
-Notice that `React.createElement` is a simple javascript function which takes three arguments. First argument is the element you want to render. In our case it's a `div` element. Second argument is any properties we want to pass to that element. In our case we are not passing anything so it's null. Third argument is the children for this component. In this case it's the text we want to display - `Hello World`. So with this we are telling React to render a div element like this:
+Notice that `React.createElement` is a simple JavaScript function which takes three arguments. First argument is the element you want to render. In our case it's a `div` element. Second argument is any properties we want to pass to that element. In our case we are not passing anything so it's null. Third argument is the children for this component. In this case it's the text we want to display - `Hello World`. So with this we are telling React to render a div element like this:
 
 ```html
 <div>
@@ -36,11 +36,11 @@ Notice that `React.createElement` is a simple javascript function which takes th
 
 Congratulations, you have created your first Hello World React component.
 
-Now your inquisitive mind is probably asking - how in the world React renders this thing on the browser?
+Now your inquisitive mind is probably asking - how in the world does React render this thing on the browser?
 
 ## Rendering
 
-Let's step back from React for a moment and think about how we can create the similar Hello World `div` using pure Javascript. Yes pure Javascript - without any frameworks.
+Let's step back from React for a moment and think about how we can create the similar Hello World `div` using pure JavaScript. Yes pure JavaScript - without any frameworks.
 
 ### Good Ol' Days
 
@@ -55,7 +55,7 @@ Let's imagine you have a barebone `html` file that looks like below. It has a `d
 </html>
 ```
 
-Now imagine inside the `div` with id `root` we want to render another `div` that says `Hello World`. The only catch is we want to do that programmatically using pure Javascript.
+Now imagine inside the `div` with id `root` we want to render another `div` that says `Hello World`. The only catch is we want to do that programmatically using pure JavaScript.
 To achieve this we can probably do something like this:
 
 ```js
@@ -73,7 +73,7 @@ Here we are creating a `div` node with `Hello World` text and appending that `di
 We can actually write our entire application this way - creating elements, removing elements, appending elements, etc ourselves. As a matter of fact we did write applications this way before all these UI frameworks/libraries started to mushroom.
 
 ### Age of React
-A simple example like the one above are not that hard to write with pure Javascript but once your application gets bigger, it gets messier. That's where libraries like React come to the rescue - they hide away from us the messier part of rendering on the browser.
+A simple example like the one above are not that hard to write with pure JavaScript but once your application gets bigger, it gets messier. That's where libraries like React come to the rescue - they hide away from us the messier part of rendering on the browser.
 
 The Core React library itself doesn't really know how to render anything on the browser because it is designed to work in a web browser as well as native applications. Thus the job of rendering your component on the browser is done by another library provided by React team called `ReactDOM`.
 
@@ -85,7 +85,7 @@ ReactDOM.render(HelloWorld, document.getElementById('root'))
 
 Here we are calling a function called `render` on `ReactDOM` object. The first argument of the function is the component you want to render - in our case `HelloWorld`. Second argument is a document selector. ReactDOM appends the component we want to display (first argument) as a child of the node returned by the selector (second argument).
 
-Compare this solution to the pure Javascript solution we looked at earlier. With pure Javascript we were doing the DOM manipulation ourselves - creating the `div`, appending the text and appending the newly created `div` to the `div` with id `root` as its child. But with React we are not doing any DOM manipulation ourselves. Basically we are saying to React - 
+Compare this solution to the pure JavaScript solution we looked at earlier. With pure JavaScript we were doing the DOM manipulation ourselves - creating the `div`, appending the text and appending the newly created `div` to the `div` with id `root` as its child. But with React we are not doing any DOM manipulation ourselves. Basically we are saying to React - 
 
 > Hey React I have a component I want to render. I will tell you what the component should look like when it's rendered (remember this is what the return of the Component function tells). I will also tell you where to render this component (second argument we passed to `ReactDOM.render` function). But I don't want to get involved in DOM manipulation - I will let you do all the DOM manipulation yourself. You can call all these DOM api like `document.createElement`, `.append`, `.appendChild` etc. whenever you wish - I trust you and I don't care as long as I see on the browser what I expected to see.
 
