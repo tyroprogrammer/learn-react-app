@@ -68,7 +68,7 @@ class CompanyProfile extends Component {
 
 /**
  * 🚨 🚨 DO NOT DELETE OR CHANGE THIS.🚨 🚨
- * This is how you would use your above component and 
+ * This is how you would use your above component and
  * the output of this code is displayed on the browser
  */
 const Usage = (props) => {

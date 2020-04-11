@@ -20,11 +20,11 @@ The job of the `Dialog` component is to render a modal window but it shouldn't c
 
 How do we tell this dialog to display different things?
 
-There are couple common patterns used in React to do this.
+There are a couple of common patterns used in React to do this:
 
 1. props.children
 
-One way to achieve this goal of reusing `Dialog` anywhere we like without `Dialog` having to know what it's displaying is by using the `children` props. Let's look at one potential usage of `Dialog` component below to understand this:
+One way to achieve this goal of reusing `Dialog` anywhere we like without `Dialog` having to know what it's displaying, is by using the `children` props. Let's look at one potential usage of `Dialog` component below to understand this:
 
 ```jsx
 //Displays EmployeeProfile inside a Dialog
@@ -39,7 +39,7 @@ class EmployeeProfileDialog extends React.Component {
     }
 }
 ```
-Here we have a component called `EmployeeProfile` (any other valid React component would also work here) as a "child" of `Dialog`. When we pass a "child" to a component it will be available inside that component as a `props` called `children`. So in this case, `EmployeeProfile` will be available inside the `Dialog` component as `props.children`. We can rewrite render function of `Dialog` so that it renders `props.children`.
+Here we have a component called `EmployeeProfile` (any other valid React component would also work here) as a "child" of `Dialog`. When we pass a "child" to a component it will be available inside that component as a `props` called `children`. So in this case, `EmployeeProfile` will be available inside the `Dialog` component as `props.children`. We can rewrite the render function of `Dialog` so that it renders `props.children`:
 
 ```jsx
 class Dialog extends React.Component {
@@ -54,15 +54,15 @@ class Dialog extends React.Component {
     }
 }
 ```
-Think about what we did here. The `Dialog` component really doesn't know what it's `children` would be beforehand. Whoever is using this `Dialog` component can pass in any `children` that they like. Within the `render` function `Dialog` says - hey I'll display anything my user passes me as `children`, I don't need to know what that is.
+Think about what we did here. The `Dialog` component really doesn't know what it's `children` would be beforehand. Whoever is using this `Dialog` component can pass in any `children` that they like. Within the `render` function `Dialog` says "Hey, I'll display anything my user passes me as `children`, I don't need to know what that is."
 
 This my friend is composition and this is mighty powerful if you want to write reusable components.
 
 2. render props
 
-Another pattern to achieve a similar thing in React is by using what's known as "render props" pattern.
+Another pattern to achieve a similar thing in React is by using what's known as the "render props" pattern.
 
-So now let's take the same dialog example but let's make it more sophisticated. Imagine the dialog has a header, body and footer section. We want the user of this component to be able to display anything they like within either of those three sections.
+So now let's take the same dialog example, but let's make it more sophisticated. Imagine the dialog has a header, body and footer section. We want the user of this component to be able to display anything they like within either of those three sections.
 
 ```jsx
 class Dialog extends React.Component {

@@ -10,7 +10,7 @@ const EMPTY_TICKER_MSG = 'Please type a stock ticker and click Search button.';
 
 /**
  * 🏆
- * The goal of this capstone project is to bring together most of the 
+ * The goal of this capstone project is to bring together most of the
  * concepts you have learned in this tutorial together by building this feature.
  * The feature we are building is pretty straight forward. There's an input
  * field and a search button. When the user types in a valid stock ticker and
@@ -32,7 +32,7 @@ class Capstone extends Component {
     handleSearch(stockTicker) {
         /**
          * ✏️ 
-         * When this method is called, it will be given a stockTicker 
+         * When this method is called, it will be given a stockTicker
          * as an argument. You need to call setState to set the stockTicker
          * state to the value provided to this function
          */
@@ -48,7 +48,7 @@ class Capstone extends Component {
          *      Like: isEmpty(this.state.stockTicker)
          * 🧭  If it is empty assign <div>{EMPTY_TICKER_MSG}</div> to EmptyTickerMessage
          * 🧭  If the stockTicker is not empty assign null to EmptyTickerMessage
-         * You can either use ternery operator - 
+         * You can either use ternery operator -
          *      const a = isEmpty(b) ? c : null;
          * OR you can use '&&' operator -
          *      const a = isEmpty(b) && c;

@@ -1,5 +1,6 @@
-Handling events in JSX is pretty similar to handling events in actual DOM. 
-For example if we have a `button` element and we want to pass an event handler for `click` event we can pass a props called `onClick` to the button element.
+Handling events in JSX is pretty similar to handling events in actual DOM.
+For example if we have a `button` element and we want to pass an event handler for a `click` event, we can pass a props called `onClick` to the button element.
+
 
 ```jsx
 function ClickableButton(props){
@@ -20,7 +21,7 @@ Ex:
 - `onselect` => `onSelect`
 - `onchange` => `onChange`
 
-2. With HTML we would pass a string as a value of the attribute but in JSX we passed actual function. For example compare the above `button` in JSX to the following HTML equivalent:
+2. With HTML we would pass a string as a value of the attribute, but in JSX we pass the actual function. For example compare the above `button` in JSX to the following HTML equivalent:
 
 ```html
 <button onclick="handleClick()"></button>
@@ -44,9 +45,9 @@ function InputComponent(props){
 ```
 ### Function Binding
 
-One gotcha when using event handlers with components created as `ES6` classes (by extending `React.Component`) is the method binding. This has nothing to do with React or JSX but it's new Javascript feature in `ES6` and trips even many experienced folks.
+One gotcha when using event handlers with components created as `ES6` classes (by extending `React.Component`) is the method binding. This has nothing to do with React or JSX - it's a new JavaScript feature in `ES6` and trips even many experienced folks.
 
-Class function in `ES6` are not bound to anything by default. For example take below example of `Input` component. Here we just have an input element whose value is assigned to `this.state.inputValue` and we are handling `onChange` event on this `input` by passing `this.handleChange` function. Inside the `handleChange` function we are calling `setState` with the new value typed by the user. Now if we run this code it will error out saying something like "Cannot read property setState of undefined". Weird huh? The reason is because `handleChange` is not bound to anything. So `this` inside `handleChange` is `undefined`.
+Class functions in `ES6` are not bound to anything by default. For example take below example of `Input` component. Here we just have an input element whose value is assigned to `this.state.inputValue`, and we are handling the `onChange` event on this `input` by passing our `this.handleChange` function. Inside the `handleChange` function we are calling `setState` with the new value typed by the user. Now if we run this code it will error out saying something like "Cannot read property setState of undefined". Weird huh? The reason is because `handleChange` is not bound to anything. So `this` inside `handleChange` is `undefined`.
 
 ```jsx
 class Input extends React.Component {

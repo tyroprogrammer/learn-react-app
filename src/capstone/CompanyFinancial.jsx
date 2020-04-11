@@ -56,24 +56,24 @@ class CompanyFinancial extends Component {
     * every time either the props changes or the state changes for this component
     */
     componentDidUpdate(prevProps, prevState) {
-    /**
-     * ✏️ 
-     * You need to call the fetchCompanyFinancial method to fetch the 
-     * comanyFinancial data when the parent passes you a different stockTicker
-     * 🧭  Remember to check if the stockTicker props changed before calling the 
-     *     fetchCompanyFinancial method though. You DON'T want to fetch the data
-     *     if the stockTicker hasn't changed. If you don't check whether props
-     *     changed your component will go in an infinite loop - it will be
-     *     fetching the same data over and over again.
-     * This lifecycle method will be given multiple arguments.
-     * First argument is the value of props before this component updated
-     * Second argument is the value of the state before this component updated
-     * In our case we just want to check props to see if value for stockTicker 
-     * changed and the way to do this is:
-     *  if (this.props.stockTicker !== prevProps.stockTicker) {
-     *     //Fetch data here only if the current props is not same as previous props
-     *  }
-     */
+        /**
+         * ✏️ 
+         * You need to call the fetchCompanyFinancial method to fetch the 
+         * comanyFinancial data when the parent passes you a different stockTicker
+         * 🧭  Remember to check if the stockTicker props changed before calling the 
+         *     fetchCompanyFinancial method though. You DON'T want to fetch the data
+         *     if the stockTicker hasn't changed. If you don't check whether props
+         *     changed your component will go in an infinite loop - it will be
+         *     fetching the same data over and over again.
+         * This lifecycle method will be given multiple arguments.
+         * First argument is the value of props before this component updated
+         * Second argument is the value of the state before this component updated
+         * In our case we just want to check props to see if value for stockTicker 
+         * changed and the way to do this is:
+         *  if (this.props.stockTicker !== prevProps.stockTicker) {
+         *     //Fetch data here only if the current props is not same as previous props
+         *  }
+         */
     }
 
     /**

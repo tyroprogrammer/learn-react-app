@@ -2,16 +2,16 @@ React Components can have local state. This state is not shared with the compone
 
 Remember when we looked at different ways of creating React component in the first page of this tutorial, we said there are things that component extending `React.Component` can do that a `function` component cannot do? Well state is one of them. `React.Component` can have states but `function` cannot have states.
 
-*Note: There's a new feature in React called hooks that let's us use state within function component but that's still in alpha so if we want to use state right now on a component we still need to use `React.Component`*
+*Note: There's a new feature in React called hooks that let's us use state within function component but that's still in alpha so if we want to use state right now on a component we still need to use `React.Component`.*
 
-Below is a simple component that has a state. 
+Below is a simple component that has a state.
 
 ```jsx
 class Component extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            counter: 0 
+            counter: 0
         }
     }
 
@@ -23,7 +23,7 @@ class Component extends React.Component {
 
 `state` is just an object. If you notice the constructor, we initialized the state with `{counter: 0}`. And we used the state inside the `return` of the `render` function as `{this.state.counter}`.
 
-We initialized the `state` in the constructor but how do we update it? For eg. in the above example how do we change the `counter` to lets say 1? For that React provides a function called `setState`. You should **always** use `setState` function to change `state` and **never** mutate it directly.
+We initialized the `state` in the constructor, but how do we update it? For example in the above example, how do we change the `counter` to let's say 1? For that React provides a function called `setState`. You should **always** use the `setState` function to change `state` and **never** mutate it directly.
 
 ```jsx
 //❌  NEVER DO THIS
@@ -34,11 +34,12 @@ this.setState({
     counter: 2
 });
 ```
-If `state` is just an instance variable in the component, can we call it some other name and why do we **have** to use `setState`? Well no we cannot call it by some other name and we have to use `setState` to update the `state` mainly because React understands `state`. When `state` of your component changes, React re-renders your component (by re-render I mean calls the `render` function again to see if the DOM will change as a result of change in `state`). This is fundamental to the declarative nature of React.
+
+If `state` is just an instance variable in the component, can we call it some other name? And why do we **have** to use `setState`? Well no we cannot call it by some other name, and we have to use `setState` to update the `state` mainly because React understands `state`. When `state` of your component changes, React re-renders your component (by re-render I mean calls the `render` function again to see if the DOM will change as a result of change in `state`). This is fundamental to the declarative nature of React.
 
 ### setState
 
-Let's look deeper into `setState` function. First argument of `setState` function can take either a new state object or a function. It also has a optional second argument, which is a callback which is executed when the state is updated.
+Let's look deeper into `setState` function. The first argument of `setState` function can take either a new state object or a function. It also has an optional second argument, a callback which is executed when the state is updated.
 
 ```jsx
 setState(newState || function, optional callback)
@@ -56,7 +57,7 @@ this.setState({ a: 3 }); //we call setState with just one key value pair
 state = { a: 3, b: 2, c: 3 } //state after setState is flushed
 ```
 
-- If the first argument is a function then it first executes the function by passing the current `state` as it's argument. The function must return an object. It then merges this output with the current `state` just like it did above. For example:
+- If the first argument is a function, then it first executes the function by passing the current `state` as it's argument. The function must return an object. It then merges this output with the current `state` just like it did above. For example:
 
 ```jsx
 state = { a: 1, b: 2, c: 3} //initial state
@@ -83,7 +84,7 @@ this.setState({
 console.log(this.state.counter);//still prints 0
 ```
 
-Also if you want to update `state` using the current state value **always** use the updater function inside `setState` instead of passing object. For example below code will not work.
+Also if you want to update `state` using the current state value, **always** use the updater function inside `setState` instead of passing object. For example below code will not work.
 
 ```jsx
 //❌  DONT DO THIS
@@ -93,7 +94,7 @@ this.setState({ counter: this.state.counter + 1 });
 this.setState({ counter: this.state.counter + 1 });
 this.setState({ counter: this.state.counter + 1 });
 //the state will be 1 when all of the calls are flushed
-//because since the calls were asynchronous, this.state.counter 
+//because since the calls were asynchronous, this.state.counter
 //on all three calls were 0 and adding 1 resulted in 1.
 
 
