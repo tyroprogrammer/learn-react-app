@@ -1,6 +1,7 @@
 Handling events in JSX is pretty similar to handling events in actual DOM.
 For example if we have a `button` element and we want to pass an event handler for a `click` event, we can pass a props called `onClick` to the button element.
 
+
 ```jsx
 function ClickableButton(props){
     //callback function that's called when button is clicked

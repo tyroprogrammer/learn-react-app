@@ -62,8 +62,8 @@ class Capstone extends Component {
          * 1. We are passing `handleSearch` function to `Search` component as `onSearch` props.
          *    `Search` component will execute this props when the user clicks Search button.
          *     and it will pass the current value on the input field as an argument to this function.
-         *     Remeber above we we updated the state when this function is called
-         * 2. We are passing `stockTicker` props to both `CompanyProfile` and
+         *     Remember above we updated the state when this function is called
+         * 2. We are passing `stockTicker` props to both `CompanyProfile` and 
          *    `CompanyFinancial` components. These components should use the `stockTicker`
          *    props to fetch the appropriate data from the API provided and render it.
          * 3. We have a line like {EmptyTickerMessage}. It's the constant we defined above.
