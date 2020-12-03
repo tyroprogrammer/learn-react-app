@@ -11,7 +11,7 @@ function CompanyProfile(props) {
      * 💡 some variables to store mock data
      * We will use these data to display the company profile information
      */
-    const stockTicker = 'APPL';
+    const stockTicker = 'AAPL';
     const companyProfileInfo = {
         'Company Name': 'Apple Inc.',
         'Price': 150,

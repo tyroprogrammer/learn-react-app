@@ -1,4 +1,4 @@
-Congratulations! Thank you for sticking around till the end. I hope you enjoyed the tutorial, and I hope they helped you get off the ground with some React fundamentals.
+Congratulations! Thank you for sticking around 'til the end. I hope you enjoyed the tutorial, and I hope it helped you get off the ground with some React fundamentals.
 This tutorial is by no means a comprehensive one. I have tried to cover some grounds on the most basic fundamentals you must know about React.
 
 If you liked this tutorial, please feel free to share this with others who are trying to learn React. If there is anything you didn't particularly like, or thought was confusing, please feel free to drop me a note or create a PR. Needless to say, your suggestions would help several other folks trying to learn React.
@@ -8,7 +8,7 @@ If you liked this tutorial, please feel free to share this with others who are t
 As with anything in software engineering, the best way to learn is by doing. I hope in this tutorial you were able to do the exercises on each section, and also complete the capstone project at the end. The next step is to create your own application and starting fiddling with it. The easiest way to get going is by using [create-react-app](https://github.com/facebook/create-react-app). With this, you don't have to waste a single minute doing any configuration/setup to create a new react application. Everything is configured for you.
 
 ### Real World example
-Also, if you want to explore some real world application written in React, guess what? you have already checked one out. I'm not sure if you noticed, but this tutorial application is written in React. So it's not a bad idea to navigate the code base. Start from `index.js` and explore - see how things are done, play with components, make changes, try to make improvements and see where it leads you. If you think the changes you made locally are useful to the community, please [create a PR](https://github.com/tyroprogrammer/learn-react-app). It will help you and it will help others! 😊
+Also, if you want to explore some real world application written in React, guess what? You have already checked one out. I'm not sure if you noticed, but this tutorial application is written in React. So it's not a bad idea to navigate the code base. Start from `index.js` and explore - see how things are done, play with components, make changes, try to make improvements and see where it leads you. If you think the changes you made locally are useful to the community, please [create a PR](https://github.com/tyroprogrammer/learn-react-app). It will help you and it will help others! 😊
 
 ## Resources
 

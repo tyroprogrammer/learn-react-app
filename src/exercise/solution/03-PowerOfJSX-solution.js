@@ -1,7 +1,7 @@
 import React from 'react';
 
 function StockProfile(props) {
-    const stockTicker = 'APPL';
+    const stockTicker = 'AAPL';
     const companyProfileInfo = {
         'Company Name': 'Apple Inc.',
         'Price': 150,

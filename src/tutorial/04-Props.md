@@ -1,10 +1,10 @@
-Let's continue with the earlier example where we displayed company profile of `APPL`. Let's say I want to display the Company Profile for `FB` at some other place in the application. Since we have two variables `ticker` and `companyProfileInfo` hard-coded inside this component should I copy and paste the entire component to some other place and replace the `ticker` and `companyProfileInfo` to be that of `FB`?
+Let's continue with the earlier example where we displayed company profile of `AAPL`. Let's say I want to display the Company Profile for `FB` at some other place in the application. Since we have two variables `ticker` and `companyProfileInfo` hard-coded inside this component, should we copy and paste the entire component to some other place and replace the `ticker` and `companyProfileInfo` to be that of `FB`?
 
- Well, no. Remember React is about building reusable Components. So we want to build a component called `CompanyProfile` that can be reused for any company ticker.
+ Well, no. Remember that React is about building reusable Components. So we want to build a component called `CompanyProfile` that can be reused for any company ticker.
 
  Let's look at the `CompanyProfile` component again. Here we have two variables `ticker` and `companyProfileInfo`. So what if instead of hard coding the values of these two variables here inside the component, we could pass those values to this component instead?
 
-If we were to pass these values to this component from outside, then this Component will not be tied to one Company ticker. We can pass in `XYZ` and it's profile info to this component and it should be able to render the profile for `XYZ` or any other company for that matter. This component becomes truly reusable. Wonderful, that's what we want. 
+If we were to pass these values to this component from outside, then this Component will not be tied to one Company ticker. We can pass in `XYZ` and it's profile info to this component and it should be able to render the profile for `XYZ` or any other company for that matter. This component becomes truly reusable. Wonderful, that's what we want.
 
 ```jsx
 function CompanyProfile(props) {
@@ -28,8 +28,8 @@ function CompanyProfile(props) {
 }
 ```
 
-Well then how do we pass these values to a component from outside? That's where `props` comes in. In React lingo, `props` are something that the component is passed by the user of that component (parent component passes `props` to child component). 
-You can pass anything as a props - `function`, `object`, `boolean`, `string`, `number` etc. Here's an example of a Component passing the `props` to its children.
+Well then how do we pass these values to a component from outside? That's where `props` comes in. In React lingo, `props` is something that the component is passed by the user of that component (parent component passes `props` to child component).
+You can pass anything as a prop: `function`, `object`, `boolean`, `string`, `number`, etc. Here's an example of a Component passing the `props` to its children.
 
 ```jsx
 function Children(props) {
@@ -84,7 +84,7 @@ function Children(props) {
 ```
 
 ### PropTypes
-In many cases it's better for a component to clearly define a contract regarding the `props` it can accept - data type, data structure, if the props is required etc. 
+In many cases it's better for a component to clearly define a contract regarding the `props` it can accept - data type, data structure, if the props is required etc.
 There are couple obvious benefits of this:
 - React can enforce type checking to avoid many bugs arising from parents passing props with a type that's different from what the children expects (ex. parent passing `string` when children expects an `object`).
 - If you are writing components that will be used by different people at different parts of the application, it's always useful for those users to know what are the props they can pass, what is the expected structure of the props etc.
@@ -111,16 +111,16 @@ SoftwareEngineer.propTypes = {
     }) //must be an object with 'street' and 'city' fields
 }
 ```
-Here we have defined the `propTypes` property and assigned an object. Each key in this object represents the name of the `props` the user of this component can pass. The value defines the "type" of the `props` - you know `string`, `number`, `array` etc. All `props` are optional (user of the component doesn't have to pass them) except the one that has `.isRequired`. Here's a quick explanation on three `props` defined above:
+Here we have defined the `propTypes` property and assigned an object. Each key in this object represents the name of the `props` the user of this component can pass. The value defines the "type" of the `props` - you know: `string`, `number`, `array`, etc. All `props` are optional (user of the component doesn't have to pass them) except the one that has `.isRequired`. Here's a quick explanation on three `props` defined above:
 - `name` - It expects the value of this `props` to be a `string` and it's required because, well, it has `.isRequired`.
 - `hobbies` - It's optional but if passed it must be an array of strings.
-- `address` - It's also optional but if passed it must be an object with two fields - `street` and `city` and both must be string.
+- `address` - It's also optional but if passed it must be an object with two fields - `street` and `city` - and both must be string.
 
 These are just some examples of what you can do to enable type checking. There are plenty more types you can define - please check out [the documentation](https://reactjs.org/docs/typechecking-with-proptypes.html#proptypes) for more.
 
 ### Default Props
 In some cases you might want to define a default value for a `props` in case it is not passed to you.
-You can use `defaultProps` property to define your defaults. With this you're basically saying - "if someone doesn't pass me a value for a `props` that I'm expecting, then I want the value of that `props` to be what I have defined in the `defaultProps`". For example - for above component we can define `defaultProps` as follows:
+You can use `defaultProps` property to define your defaults. With this you're basically saying - "if someone doesn't pass me a value for a `props` that I'm expecting, then I want the value of that `props` to be what I have defined in the `defaultProps`". For example - for the above component we can define `defaultProps` as follows:
 
 ```jsx
 import React from 'react';
@@ -132,7 +132,7 @@ class SoftwareEngineer extends React.Component {
         console.log(this.props.hobbies);
 
         //if this props is not passed, it will print `undefined` because we haven't defined any default value for this props
-        console.log(this.props.address); 
+        console.log(this.props.address);
         return (...)
     }
 }
