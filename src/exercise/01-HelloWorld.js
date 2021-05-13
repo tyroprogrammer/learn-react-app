@@ -13,7 +13,7 @@ function HelloWorld(props) {
          * Use the React.createElement function to display a div
          * and Hello World text inside the div
          */
-        null
+        React.createElement('div', null, 'Hello World')
     );
 }
 
