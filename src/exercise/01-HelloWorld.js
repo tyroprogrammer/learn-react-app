@@ -14,6 +14,10 @@ function HelloWorld(props) {
          * and Hello World text inside the div
          */
         React.createElement('div', null, 'Hello World')
+
+
+        // Couldn't I just use jsx here and do <div>Hello World</div> ?
+        
     );
 }
 
