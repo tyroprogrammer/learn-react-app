@@ -36,6 +36,9 @@ class Search extends Component {
          *  to this function as argument. e.target.value here will give you that value
          *🧭 Set this value to the state `stockTicker`
          */
+         this.setState({
+            stockTicker: e.target.value
+        })
     }
 
     handleSearch() {
@@ -45,6 +48,7 @@ class Search extends Component {
          * Pass the latest `stateTicker` state when you invoke that function
          * this.props.onSearch(this.state.stockTicker)
          */
+         this.props.onSearch(this.state.stockTicker);
     }
 
     render() {

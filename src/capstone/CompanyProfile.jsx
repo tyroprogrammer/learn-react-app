@@ -47,6 +47,7 @@ class CompanyProfile extends Component {
          * that will fetch the data from the given API
          * You just need to invoke it here
          */
+        this.fetchCompanyProfile();
     }
 
     /**
@@ -74,6 +75,9 @@ class CompanyProfile extends Component {
          *     //Fetch data here only if the current props is not same as previous props
          *  }
          */
+         if (this.props.stockTicker !== prevProps.stockTicker) {
+            this.fetchCompanyProfile();
+        }
     }
 
     /**
@@ -150,7 +154,10 @@ class CompanyProfile extends Component {
          * Either ways you are telling ErrorMsg to display the div with the
          * error message only when the `erroMsg` state is not empty
          */
-        const ErrorMsg = null;
+        const ErrorMsg = (
+            !isEmpty(this.state.errorMsg) &&
+            <div>{this.state.errorMsg}</div>
+        );
 
         /**
          * 💡 
