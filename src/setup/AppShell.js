@@ -143,11 +143,13 @@ class PersistentDrawerLeft extends React.Component {
           <Divider />
           <List>
             {TutorialMetadataApi.getTutorialMetadata().map((tutorial, index) => (
+              <Link className={classes.leftMenuNav} onClick={this.handleDrawerClose} to={tutorial.route}>
               <ListItem button key={tutorial.displayName}>
                 <ListItemText>
-                  <Link className={classes.leftMenuNav} onClick={this.handleDrawerClose} to={tutorial.route}>{tutorial.displayName}</Link>
+                  {tutorial.displayName}
                 </ListItemText>
               </ListItem>
+              </Link>
             ))}
           </List>
         </Drawer>
