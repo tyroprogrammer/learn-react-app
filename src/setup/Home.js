@@ -5,7 +5,6 @@ import styled from 'styled-components';
 
 const Container = styled.div`
     padding: 10px;
-    margin: 10px;
     text-align: center;
 `
 
@@ -44,7 +43,7 @@ class Home extends Component {
         const { tutorialMetadata } = this.state;
         return (
             <Container>
-                <Title>
+                <Title >
                     Welcome to Learn React App!
                 </Title>
                 <div>
