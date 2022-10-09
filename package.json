@@ -22,7 +22,8 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "^3.3.0",
     "styled-components": "^4.3.1",
-    "typescript": "^3.4.5"
+    "typescript": "^3.4.5",
+    "@snyk/protect": "latest"
   },
   "scripts": {
     "start": "npm run build:markdown && react-scripts start",
@@ -30,7 +31,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --passWithNoTests",
     "eject": "react-scripts eject",
-    "build:markdown": "node scripts/processMarkdown"
+    "build:markdown": "node scripts/processMarkdown",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -43,5 +46,6 @@
   ],
   "devDependencies": {
     "chalk": "^2.4.2"
-  }
+  },
+  "snyk": true
 }
